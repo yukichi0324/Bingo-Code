@@ -1,9 +1,8 @@
 import React from "react";
 import "./BingoCard.css"; // 上記のCSSを適用
-
-const colorwords = ["あか", "あお", "みどり", "オレンジ", "むらさき", "みずいろ", "しろ", "くろ", "きいろ", "ピンク", "ちゃいろ", "グレー", "ゴールド", "シルバー", "ベージュ"];
-const items = ["服", "靴", "帽子", "店", "ポイント", "時計", "カバン", "アクセサリー"];
-const times = ["1時", "2時", "3時", "4時", "5時", "6時", "7時", "8時", "9時"];
+import { elements } from "./elements.js";
+import { ideas } from "./ideas.js";
+import { methods } from "./methods.js";
 
 function getRandomElements(arr, num) {
   let shuffled = arr.sort(() => 0.5 - Math.random());
@@ -20,9 +19,12 @@ function shuffleArray(arr) {
 
 function BingoCard() {
   // 各配列からランダムに要素を選ぶ
-  const selectedColors = getRandomElements(colorwords, 15);
-  const selectedItems = getRandomElements(items, 5);
-  const selectedTimes = getRandomElements(times, 5);
+  console.log("methods:", methods);
+  console.log("ideas:", ideas);
+  console.log("elements:", elements);
+  const selectedColors = getRandomElements(methods, 15);
+  const selectedItems = getRandomElements(ideas, 5);
+  const selectedTimes = getRandomElements(elements, 5);
 
   // 全ての選ばれた単語を1つの配列に統合してシャッフル
   let words = [...selectedColors, ...selectedItems, ...selectedTimes];

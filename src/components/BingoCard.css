@@ -1,3 +1,4 @@
+
 .bingo-card {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
@@ -15,14 +16,16 @@
 }
 
 .cell {
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #000;
-  background-color: #f0f0f0;
+  background-color: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   font-size: 1.2em; /* 少し小さくする */
   width: 100%; /* 各セルの幅 */
   height: 100%; /* 各セルの高さ */
   aspect-ratio: 1 / 1; /* 各セルを正方形にする */
+  font-family: 'Caveat', cursive; /* Chalk-like font */
 }
