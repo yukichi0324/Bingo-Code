@@ -4,11 +4,9 @@
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(5, 1fr);
   gap: 5px;
-  width: 80vw; /* ビンゴカード全体の幅を設定 */
-  height: 80vw; /* ビンゴカード全体の高さを設定（正方形にするため） */
-  max-width: 400px;
-  max-height: 400px; /* max-widthとmax-heightを同じに設定 */
-  margin: 10px auto 0 auto; /* 中央に配置 */
+  max-width: 600px;
+  max-height: 600px; /* max-widthとmax-heightを同じに設定 */
+  margin: 50px auto 0 auto; /* 中央に配置 */
 }
 
 .row {
