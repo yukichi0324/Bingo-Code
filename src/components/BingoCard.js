@@ -4,9 +4,14 @@ import { elements } from "./elements.js";
 import { ideas } from "./ideas.js";
 import { methods } from "./methods.js";
 
+
 function getRandomElements(arr, num) {
-  let shuffled = arr.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, num);
+  let result = arr.slice(); // 元の配列をコピー
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]]; // 要素を入れ替え
+  }
+  return result.slice(0, num); // 指定された数の要素を取得
 }
 
 function shuffleArray(arr) {
