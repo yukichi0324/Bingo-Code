@@ -22,12 +22,12 @@ function BingoCard() {
   console.log("methods:", methods);
   console.log("ideas:", ideas);
   console.log("elements:", elements);
-  const selectedColors = getRandomElements(methods, 15);
-  const selectedItems = getRandomElements(ideas, 5);
-  const selectedTimes = getRandomElements(elements, 5);
+  const selectedMethods = getRandomElements(methods, 15);
+  const selectedIdeas = getRandomElements(ideas, 5);
+  const selectedElements = getRandomElements(elements, 5);
 
   // 全ての選ばれた単語を1つの配列に統合してシャッフル
-  let words = [...selectedColors, ...selectedItems, ...selectedTimes];
+  let words = [...selectedMethods, ...selectedIdeas, ...selectedElements];
   words = shuffleArray(words); // 配列をシャッフル
 
   return (
